@@ -1,0 +1,25 @@
+dev:
+  build: .
+  ports:
+    - 3000:3000
+    - 35729:35729
+  command: gulp.js test
+  volumes:
+    - ".:/app"
+  environment:
+    - PATH=$PATH:/usr/local/nvm/versions/node/v5.5.0/bin/:/app/node_modules/gulp/bin/
+    - APP_PORT=3000
+    - APP_ENV=development
+
+test:
+  build: .
+  ports:
+    - 3000:3000
+    - 35729:35729
+  command: gulp.js test
+  volumes:
+    - ".:/app"
+  environment:
+    - PATH=$PATH:/usr/local/nvm/versions/node/v5.5.0/bin/:/app/node_modules/gulp/bin/
+    - APP_PORT=3000
+    - APP_ENV=development
