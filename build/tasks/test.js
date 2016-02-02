@@ -3,10 +3,10 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 
 
-gulp.task('test', ['watch'], function() {
+gulp.task('test', function() {
   nodemon({
   		exec: 'npm test',
-		ext: 'js',
+		ext: 'js json',
 		legacyWatch: true
 	})
    .on('start', function () {

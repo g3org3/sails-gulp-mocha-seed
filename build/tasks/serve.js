@@ -3,9 +3,9 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 
 
-gulp.task('serve', ['watch'], function() {
+gulp.task('serve', function() {
   nodemon({ script: 'app',
-            ext: 'html js',
+            ext: 'jade js json',
             legacyWatch: true
 })
    .on('start', function () {

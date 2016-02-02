@@ -3,7 +3,7 @@ dev:
   ports:
     - 3000:3000
     - 35729:35729
-  command: gulp.js test
+  command: gulp.js serve
   volumes:
     - ".:/app"
   environment:
